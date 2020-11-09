@@ -1,12 +1,7 @@
 # **Traffic Sign Recognition** 
 
-## Writeup
 
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
-
-**Build a Traffic Sign Recognition Project**
+** Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
@@ -17,7 +12,7 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 
-[//]: # (Image References)
+[//]: # (https://github.com/DiegelD/Traffic_Sign_Classfier/blob/master/examples/Net.jpg)
 
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
@@ -32,11 +27,11 @@ The goals / steps of this project are the following:
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-### Writeup / README
+### README
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/DiegelD/Traffic_Sign_Classfier/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### 1 Data Set Summary & Exploration
 
@@ -77,7 +72,6 @@ To have a better overview over the data in Fig. 1.3 are all classes with an imag
  <p></p>
 
 
-
 <figure>
  <img src="./examples/dataset_visualisation_final.jpg" width="850" alt="datset visualization" />
  <figcaption>
@@ -96,7 +90,7 @@ To have a better overview over the data in Fig. 1.3 are all classes with an imag
 For the Preprocessing are three methods are used.
 1) Augmentations help the model generalize better and prevent overfitting on training data. Since, signs can be present in various orientations in a picture, augmentation the training dataset should dramatically improve model performance.(See chapter 1.2 for more  information, who its used in this project)
 
-2) The normalization substitute the brightness effect of the image. It scales the intensities within [0,1] or [-1,1] to prevent early saturation of non-linear activation function output (eg. sigmoid or relu). Otherwise the same image with different brightness could get another detection. Also, it increases the learning seed through less variance in the images and reduced possible learning features.
+2) The normalization substitute the brightness effect of the image. It resembles a normal distribution (zero mean and unitary variance) It scales the intensities within [0,1] or [-1,1] to prevent early saturation of non-linear activation function output (eg. sigmoid or relu) assuring that all input data is in the same rage. Also, it increases the learning seed because the distribution of the activations is not constantly changing. (Preventing the known internal covariance shift)
 
 3) Shuffling the data helps to avoid overfitting by giving in the specific time period much weight to the specific neuron at letting other weights and neurons getting worse by not activating the in time on class is learned.
 
@@ -106,7 +100,7 @@ For the Preprocessing are three methods are used.
 As architecture the LeNet5 is choosen. Its a simple and well suited arictecure for image reconization. 
 
 <figure>
- <img src="./examples/Net.png" width="850" alt="Net" />
+ <img src="./examples/Net.jpg" width="850" alt="Net" />
  <figcaption>
  <p></p> 
  <p style="text-align: center;"> Fig. 2.1: Model architecture</p> 
