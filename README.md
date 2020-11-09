@@ -50,7 +50,7 @@ To have a better overview over the data in Fig. 1.3 are all classes with an imag
  
 
 <figure>
- <img src="./examples/data_amout_plot.jpg" width="850" alt="data amout plot" />
+ <img src="./examples/data_amout_plot.jpg" width="550" alt="data amout plot" />
  <figcaption>
  <p></p> 
  <p style="text-align: center;"> Fig. 1.1: Overview Dataset</p> 
@@ -59,7 +59,7 @@ To have a better overview over the data in Fig. 1.3 are all classes with an imag
  <p></p>
 
 <figure>
- <img src="./examples/Figure_original_rotated.jpg" width="850" alt="Figure original rotated" />
+ <img src="./examples/Figure_original_rotated.jpg" width="450" alt="Figure original rotated" />
  <figcaption>
  <p></p> 
  <p style="text-align: center;"> Fig. 1.2: Figure original rotated</p> 
@@ -200,7 +200,7 @@ Here are the results of the prediction:
 | No entry  			| No entry          							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 91.6%
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 91.9%
 
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
@@ -212,33 +212,33 @@ The model is predict accurate the traffic signs. Except of the
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0         			| Stop sign   									| 
-| .0     				| Speed limit (20km/h) 							|
-| .0					| Speed limit (30km/h)							|
+| 3.2220753e-36 		| No entry          							|
+| .0					| Speed limit (20km/h)							|
 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .9999       			| Yield     									| 
-| .0     				| Priority road 								|
-| .0					| Turn left ahead								|
+| 0.83923995       		| Yield     									| 
+| 0.15168199			| Priority road 								|
+| 0.0062800683  		| Keep left     								|
 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0         			| Priority road   								| 
-| .0     				| Traffic signals 								|
-| .0					| Ahead only									|
+| 2.5190813e-20    		| Traffic signals 								|
+| 2.9561838e-25 		| Right-of-way at the next intersection			|
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .523       			| Priority road   								| 
-| .475     				| No passing for vehicles over 3.5 metric tons	|
-| .002					| No passing									|
+| 0.6956459      		| End of no passing by vehicles over 3.5 tons   | 
+| 0.18836837			| Right-of-way at the next intersection     	|
+| 0.047955368			| Priority road									|
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0         			| No entry      								| 
-| .0     				| Stop           								|
+| 7.7271434e-14    		| Stop           								|
 | .0					| Speed limit (20km/h)							|
 
 
