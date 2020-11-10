@@ -83,10 +83,29 @@ To have a better overview over the data in Fig. 1.3 are all classes with an imag
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-For the Preprocessing are three methods are used.
-1) Augmentations help the model generalize better and prevent overfitting on training data. Since, signs can be present in various orientations in a picture, augmentation the training dataset should dramatically improve model performance.(See chapter 1.2 for more  information, who its used in this project)
+For the Preprocessing are three methods are used:
 
-2) The normalization substitute the brightness effect of the image. It resembles a normal distribution (zero mean and unitary variance) It scales the intensities within [0,1] or [-1,1] to prevent early saturation of non-linear activation function output (eg. sigmoid or relu) assuring that all input data is in the same rage. Also, it increases the learning seed because the distribution of the activations is not constantly changing. (Preventing the known internal covariance shift)
+1) Augmentations help the model generalize better and prevent overfitting on training data. Since, signs can be present in various orientations in a picture, augmentation the training dataset should dramatically improve model performance. The optimal way to do this is seen in Fig. 2.1.1 Every Class should have the same amount of that, so that it can be assured that every class is learned equally. In this project, a quick way has been chosen that tribble the data amount of all classes. By rotating the available data once by +10° and once - 10°. For more information have a look into chapter 1.2.
+
+<figure>
+ <img src="./examples/Argumented_Data_Example.jpg" width="250" alt="Net" />
+ <figcaption>
+ <p></p> 
+ <p style="text-align: center;"> Fig. 2.1.1: Argumented Data Example</p> 
+ </figcaption>
+</figure>
+ <p></p>
+
+2) The normalization substitute the brightness effect of the image. It resembles a normal distribution (zero mean and unitary variance) Fig. 2.1.2. It scales the intensities within [0,1] or [-1,1] to prevent early saturation of non-linear activation function output (eg. sigmoid or relu) assuring that all input data is in the same rage. Also, it increases the learning seed because the distribution of the activations is not constantly changing. [More Info](https://stats.stackexchange.com/questions/185853/why-do-we-need-to-normalize-the-images-before-we-put-them-into-cnn)
+
+<figure>
+ <img src="./examples/Normalization.jpg" width="250" alt="Net" />
+ <figcaption>
+ <p></p> 
+ <p style="text-align: center;"> Fig. 2.1.2: Normalization visualisation</p> 
+ </figcaption>
+</figure>
+ <p></p>
 
 3) Shuffling the data helps to avoid overfitting by giving in the specific time period much weight to the specific neuron at letting other weights and neurons getting worse by not activating the in time on class is learned.
 
@@ -99,7 +118,7 @@ As architecture the LeNet5 is choosen. Its a simple and well suited arictecure f
  <img src="./examples/Net.jpg" width="850" alt="Net" />
  <figcaption>
  <p></p> 
- <p style="text-align: center;"> Fig. 2.1: Model architecture</p> 
+ <p style="text-align: center;"> Fig. 2.2: Model architecture</p> 
  </figcaption>
 </figure>
  <p></p>
@@ -158,13 +177,13 @@ To test it an incremental, improve have been used as followed:
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
 In 
 
-In Fig. 2.1 is the learning curve stored. The visualizatio help to figure out the state of the learned net. If its overfitted and how much epochs are needed to reach the accuracy goal.
+In Fig. 2.4 is the learning curve stored. The visualizatio help to figure out the state of the learned net. If its overfitted and how much epochs are needed to reach the accuracy goal.
 
 <figure>
  <img src="./examples/learning_curve_learning_0.0005keep_prob0.7.jpg" width="350" alt="learning curve" />
  <figcaption>
  <p></p> 
- <p style="text-align: center;"> Fig. 2.1: Learning curve</p> 
+ <p style="text-align: center;"> Fig. 2.4: Learning curve</p> 
  </figcaption>
 </figure>
  <p></p>
@@ -196,12 +215,13 @@ Here are the results of the prediction:
 | Stop Sign      		| Stop sign   									| 
 | Yield     			| Yield 										|
 | Priority road			| Priority road									|
-| 100 km/h	      		| Priority road					 				|
+| 100 km/h	      		| End of no passing by vehicles over 3.5 tons	|
 | No entry  			| No entry          							|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of 91.9%
 
+The only image, that could not be identified is the "Speed limit 100km/h", what is suspicion, because in the sign have a lot of data to train with a high variance in different data. Possible reason could be the focus of the image, that the sign is not in the middle of the image.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
