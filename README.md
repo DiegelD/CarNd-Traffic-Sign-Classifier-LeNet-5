@@ -81,7 +81,7 @@ To have a better overview over the data in Fig. 1.3 are all classes with an imag
 
 ### 2 Design and Test a Model Architecture
 
-#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. 
 
 For the Preprocessing are three methods are used:
 
@@ -122,25 +122,6 @@ As architecture the LeNet5 is choosen. Its a simple and well suited arictecure f
  </figcaption>
 </figure>
  <p></p>
-
-
-My final model consisted of the following layers:
-
-| Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution    	   	| 1x1 stride, same padding, outputs 28x28x6 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 14x14x6 			    	|
-| Convolution   	    | 1x1 stride, same padding, outputs 10x10x16 	|
-| RELU					|												|
-| Convolution   	    | 1x1 stride, same padding, outputs 10x10x32 	|
-| Max pooling	      	| 2x2 stride,  outputs 5x5x32 			    	|
-| Fully connected		| Input = 400. Output = 120   					|
-| Fully connected		| Input = 120. Output = 84   					|
-| Fully connected		| Input = 84. Output = 43   					|
-|						|												|
- 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
