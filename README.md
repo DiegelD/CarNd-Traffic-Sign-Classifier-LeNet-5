@@ -138,7 +138,7 @@ The model is trained with following parameters:
 My final model results were:
 * training set accuracy of 99.4%
 * validation set accuracy of 93.8%
-* test set accuracy of 
+* test set accuracy of 91.9%
 
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
