@@ -1,15 +1,49 @@
 # **Traffic Sign Recognition** 
 
+## Abstract
 
-** Traffic Sign Recognition Project**
+A Traffic Sign Classifier that uses a LeNet-5 model and is trained with german traffic sign. To increase the learning of the net three methods are used. 1. Argumentation 2. Normalization 3. Shuffling  
+1. Augmentations of the dataset are used to increase the generalization by rotating the pictures, so that even less represented images are equal distributed  in the dataset. 
+2. Normalization substitutes the brightness effect of the images. It scales the intensities to prevent early saturation of non-linear activations functions. 
+3. Last but not least shuffling of the data set avoids overfitting by giving in the specific time period much weight to the specific neuron at letting other weights and neurons getting worse by not activating the in time on class is learned.
 
-The goals / steps of this project are the following:
+
+The steps of this project are the following:
 * Load the data set (see below for links to the project data set)
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
+
+<figure>
+ <img src="./examples/Net.jpg" width="850" alt="Net" />
+ <figcaption>
+ <p></p> 
+ <p style="text-align: center;"> </p> 
+ </figcaption>
+</figure>
+ <p></p>
+
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+
+---
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+
+You're reading it! and here is a link to my [project code](https://github.com/DiegelD/Traffic_Sign_Classfier/blob/master/Traffic_Sign_Classifier.ipynb)
+
+### 1 Data Set Summary & Exploration
+
+#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+
+I used the pandas library to calculate summary statistics of the traffic
+signs data set:
+
+* The size of training set is: 34799 samples
+* The size of the validation set is: 4410 samples  
+* The size of test set is: 12630 samples
+* The shape of a traffic sign image is: 29,29
+* The number of unique classes/labels in the data set is: 43
 
 <figure>
  <img src="./examples/Net.jpg" width="850" alt="Net" />
@@ -246,5 +280,3 @@ The model is predict accurate the traffic signs. Except of the
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-
-
