@@ -174,7 +174,7 @@ In Fig. 2.4 is the learning curve stored. The visualizatio help to figure out th
  <img src="./examples/learning_curve_learning_0.0005keep_prob0.7.jpg" width="350" alt="learning curve" />
  <figcaption>
  <p></p> 
- <p style="text-align: center;"> Fig. 2.4: Learning curve</p> 
+ <p style="text-align: center;"> Fig. 2.4: Learning curve (Red learning data set. Blue validation data set)</p> 
  </figcaption>
 </figure>
  <p></p>
