@@ -2,11 +2,7 @@
 
 ## Abstract
 
-A Traffic Sign Classifier that uses a LeNet-5 model and is trained with german traffic sign. To increase the learning of the net three methods are used. 1. Argumentation 2. Normalization 3. Shuffling  
-1. Augmentations of the dataset are used to increase the generalization by rotating the pictures, so that even less represented images are equal distributed  in the dataset. 
-2. Normalization substitutes the brightness effect of the images. It scales the intensities to prevent early saturation of non-linear activations functions. 
-3. Last but not least shuffling of the data set avoids overfitting by giving in the specific time period much weight to the specific neuron at letting other weights and neurons getting worse by not activating the in time on class is learned.
-
+The aim of this project is to build a Traffic Sign Classifier from scratch and tune it so that it predicts the German traffic signs with a high accuracy. So first the data set gets explored and modified. Second a model the (Le Net 5 ) is chosen and the hyper parameter are adjust. At third the net is validated against totally random images from the internet to verify its accuracy. 
 
 The steps of this project are the following:
 * Load the data set (see below for links to the project data set)
