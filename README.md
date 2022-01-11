@@ -2,7 +2,7 @@
 
 ## Abstract
 
-The aim of this project is to build a Traffic Sign Classifier from scratch and tune it, so that it predicts the German traffic signs with a high accuracy. First the data set gets explored and modified. Second a model, the LeNet-5, is chosen and the hyper parameters are adjust. At third the net is validated against totally random images from the internet to verify its accuracy. 
+The aim of this project is to build a Traffic Sign Classifier from scratch and tune it, so that it predicts the German traffic signs with a high accuracy. First the data set gets explored and modified. Second a model, the LeNet-5, is chosen and the hyper parameters are adjusted. Third the net is validated against totally random images from the internet to verify its accuracy. 
 
 The steps of this project are the following:
 * Load the data set (see below for links to the project data set)
